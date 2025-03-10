@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furnace</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: black;
+            color: #0ff;
+            overflow: hidden;
+        }
+        
+        @keyframes neonBackground {
+            0% { background: #0ff; }
+            25% { background: #00f; }
+            50% { background: #f0f; }
+            75% { background: #ff0; }
+            100% { background: #0ff; }
+        }
+        
+        .neon-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: neonBackground 5s infinite alternate;
+            filter: blur(50px);
+        }
+        
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #0ff;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #0ff;
+            text-shadow: 0 0 15px #0ff;
+        }
+        .social-links a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 220px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px white;
+        }
+        .social-links a:hover {
+            opacity: 0.7;
+            box-shadow: 0 0 25px white;
+        }
+        .twitter { background: #1DA1F2; box-shadow: 0 0 15px #1DA1F2; }
+        .twitch { background: #9146FF; box-shadow: 0 0 15px #9146FF; }
+                .kick { background: #52C41A; box-shadow: 0 0 15px #52C41A; }
+        .tiktok { background: #69C9D0; box-shadow: 0 0 15px #69C9D0; }
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #0ff;
+            text-shadow: 0 0 15px #0ff;
+        }
+        .disclaimer-tab {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+        .disclaimer-content {
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ff0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff0;
+        }
+        .disclaimer-tab button {
+            background: #ff0;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-effect"></div>
+    <div class="container">
+        <h1>Follow my SOCIALS!</h1>
+        <div class="social-links">
+                        <a href="https://www.twitch.tv/ttvsoulja37" target="_blank" class="twitch">Twitch</a>
+         <a href="https://www.youtube.com/@SOULJA3738" target="_blank" class="youtube">Youtube</a>
+
+           <a href="https://www.kick.com/SOULJA37" target="_blank" class="kick">Kick</a>
+            <a href="https://www.tiktok.com/@soulja3738" target="_blank" class="tiktok">TikTok</a>
+        </div>
+    </div>
+    <div class="footer">Created by RoyalGaming273 | All Rights Reserved SINCE February 2025</div>
+    <div class="disclaimer-tab">
+        <button onclick="toggleDisclaimer()">Disclaimer</button>
+        <div class="disclaimer-content" id="disclaimer">
+         No money-back policy. We create custom social media websites for users. $10 monthly to keep the website renewed and online. $112 for a full-year subscription if paid in full.
+        </div>
+    </div>
+    <script>
+        function toggleDisclaimer() {
+            var disclaimer = document.getElementById("disclaimer");
+            if (disclaimer.style.display === "none" || disclaimer.style.display === "") {
+                disclaimer.style.display = "block";
+            } else {
+                disclaimer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
